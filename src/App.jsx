@@ -5,6 +5,7 @@ import Home from './components/Home';
 import SingleArticle from './components/SingleArticle';
 import Freelancing from './components/Freelancing';
 import Remote from './components/Remote';
+import Crypto from './components/Crypto';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path='/article' element= {<SingleArticle />}/>
           <Route path='/freelancing' element= {<Freelancing />}/>
           <Route path='/remote' element= {<Remote />}/>
+          <Route path='/crypto' element= {<Crypto />}/>
         </Routes>
       </BrowserRouter>
       
