@@ -18,9 +18,9 @@ const Header = () => {
   };
 
   const navItems = [
-    { id: 'home', label: 'Home', href: '#home' },
-    { id: 'freelancing', label: 'Freelancing', href: '#freelancing' },
-    { id: 'remote-jobs', label: 'Remote Jobs', href: '#remote-jobs' },
+    { id: 'home', label: 'Home', href: '/' },
+    { id: 'freelancing', label: 'Freelancing', href: '/freelancing' },
+    { id: 'remote-jobs', label: 'Remote Jobs', href: '/remote' },
     { id: 'crypto', label: 'Crypto', href: '#crypto' },
     { id: 'ai-tools', label: 'AI Tools', href: '#ai-tools' },
     { id: 'online-income', label: 'Online Income', href: '#online-income' },
@@ -31,7 +31,7 @@ const Header = () => {
     <Navbar expand="lg" className="bg-white py-3 sticky-top">
       <Container>
         {/* Brand Logo */}
-        <Navbar.Brand href="#home" className="d-flex align-items-center">
+        <Navbar.Brand href="/" className="d-flex align-items-center">
           <img
             src={logo}
             alt="Blogora Logo"

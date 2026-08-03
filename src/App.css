@@ -125,3 +125,65 @@ body {
 .bottom-link:hover {
   color: #ffffff;
 }
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.icon-purple {
+  background-color: #EEF2FF;
+  color: #4F46E5;
+}
+
+.icon-green {
+  background-color: #DCFCE7;
+  color: #16A34A;
+}
+
+.icon-yellow {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+
+
+
+
+/* Icon Colors */
+.icon-active-jobs {
+  background-color: #eef2ff;
+  color: #4f46e5;
+}
+
+.icon-companies {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.icon-categories {
+  background-color: #eef2ff;
+  color: #6366f1;
+}
+
+.icon-remote {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}

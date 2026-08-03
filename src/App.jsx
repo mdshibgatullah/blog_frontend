@@ -1,21 +1,24 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
 import './App.css';
-import Category from './components/Category';
-import Articles from './components/Articles';
-import Footer from './components/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import SingleArticle from './components/SingleArticle';
+import Freelancing from './components/Freelancing';
+import Remote from './components/Remote';
+
 
 function App() {
   return (
     <div>
-      <Header />
-      <main className="w-100 overflow-hidden">
-        <Hero />
-        <Category />
-        <Articles />
-        <Footer />
-      </main>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element= {<Home />}/>
+          <Route path='/article' element= {<SingleArticle />}/>
+          <Route path='/freelancing' element= {<Freelancing />}/>
+          <Route path='/remote' element= {<Remote />}/>
+        </Routes>
+      </BrowserRouter>
+      
     </div>
   );
 }
