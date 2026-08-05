@@ -3,20 +3,20 @@ import { Container, Row, Col, Card, Form, Button, Badge } from 'react-bootstrap'
 import { FaArrowRight, FaRedoAlt, FaFire, FaTag, FaBookOpen, FaBook, FaStar, FaBriefcase, FaBuilding, FaThLarge, FaGlobe } from 'react-icons/fa';
 import Sidebar from './Sidebar';
 import Layouts from './Layouts';
-import remoteBg from '../assets/remote.png'; 
+import AiToolsBg from '../assets/aitools.png'; 
 import Articles from './Articles';
 
 
 
 
-const Remote = () => {
+const AiTools = () => {
   return (
     <Layouts>
       <div className="position-relative overflow-hidden d-flex align-items-center justify-content-center py-5">
       
         {/* Background Image */}
         <img 
-          src={remoteBg} 
+          src={AiToolsBg} 
           alt="Remote Jobs Background" 
           className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
         />
@@ -24,10 +24,10 @@ const Remote = () => {
         {/* Hero Content */}
         <div className="text-center position-relative px-3">
           <h1 className="fw-bold text-dark display-5 mb-3">
-            Remote Jobs
+            Ai Tools
           </h1>
           <p className="text-secondary fs-5 mb-4 mx-auto col-11 col-md-10">
-            Discover hand-picked remote jobs from top companies and work from anywhere in the world.
+            Discover powerful Ai tools to automate tasks, boost productivity and bring your ideas to life.
           </p>
 
           {/* Stats Section */}
@@ -39,8 +39,8 @@ const Remote = () => {
                   <FaBriefcase />
                 </div>
                 <div className="text-start">
-                  <h6 className="fw-bold mb-0 text-dark">600+</h6>
-                  <small className="text-muted">Active Jobs</small>
+                  <h6 className="fw-bold mb-0 text-dark">1500+</h6>
+                  <small className="text-muted">Ai Tools</small>
                 </div>
               </div>
             </Col>
@@ -103,4 +103,4 @@ const Remote = () => {
   );
 };
 
-export default Remote;
+export default AiTools;

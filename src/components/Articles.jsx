@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Card, Form, Button, Badge } from 'react-bootstrap';
+import { Col, Card, Button, Row,  } from 'react-bootstrap';
 import { FaArrowRight, FaRedoAlt, FaFire, FaTag } from 'react-icons/fa';
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
 
 // Sample Data for Latest Articles
 const latestArticles = [
@@ -66,12 +66,21 @@ const latestArticles = [
 
 const Articles = () => {
   return (
-    <section className="py-4">
-      <Container>
-        <Row className="g-4">
+    // <section className="py-4">
+    //   <Container>
+    //     <Row className="g-4">
           
-          {/* LEFT SIDE: Latest Articles */}
-          <Col lg={8}>
+    //       {/* LEFT SIDE: Latest Articles */}
+          
+
+    //       {/* RIGHT SIDE: Sidebar Widgets */}
+    //       {/* <Sidebar /> */}
+
+    //     </Row>
+    //   </Container>
+    // </section>
+
+    <Col lg={8}>
             <Card className="border rounded-4 p-3 mb-4 bg-white shadow-sm">
               <div className="d-flex justify-content-between align-items-center mb-4">
               <h4 className="fw-bold m-0 text-dark">Latest Articles</h4>
@@ -128,13 +137,6 @@ const Articles = () => {
               </div>
             </Card>
           </Col>
-
-          {/* RIGHT SIDE: Sidebar Widgets */}
-          <Sidebar />
-
-        </Row>
-      </Container>
-    </section>
   );
 };
 

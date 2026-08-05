@@ -2,7 +2,8 @@ import React from 'react'
 import Layouts from './Layouts'
 import Hero from './Hero';
 import Category from './Category';
-import Articles from './Articles';
+import LatestArticles from './LatestArticles';
+// import Articles from './Articles';
 
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
         <main className="w-100 overflow-hidden">
           <Hero />
           <Category />
-          <Articles />
+          <LatestArticles />
         </main>
       </Layouts>
   )

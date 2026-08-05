@@ -22,13 +22,12 @@ const Header = () => {
     { id: 'freelancing', label: 'Freelancing', href: '/freelancing' },
     { id: 'remote-jobs', label: 'Remote Jobs', href: '/remote' },
     { id: 'crypto', label: 'Crypto', href: '/crypto' },
-    { id: 'ai-tools', label: 'AI Tools', href: '#ai-tools' },
+    { id: 'ai-tools', label: 'AI Tools', href: '/ai-tools' },
     { id: 'online-income', label: 'Online Income', href: '#online-income' },
-    { id: 'more', label: 'More', href: '#more' },
   ];
 
   return (
-    <Navbar expand="lg" className="bg-white py-3 sticky-top">
+    <Navbar expand="lg" className="bg-white py-3 sticky-top shadow">
       <Container>
         {/* Brand Logo */}
         <Navbar.Brand href="/" className="d-flex align-items-center">
