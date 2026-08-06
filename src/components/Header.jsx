@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Container, Button, Offcanvas } from 'react-bootstrap';
 import { FaSearch, FaBars, FaTimes } from 'react-icons/fa';
+import { NavLink, Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 const Header = () => {
   const [show, setShow] = useState(false);
 
-  const [activeNav, setActiveNav] = useState('home');
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-
-  const handleNavClick = (navItem) => {
-    setActiveNav(navItem);
-    handleClose(); 
-  };
 
   const navItems = [
     { id: 'home', label: 'Home', href: '/' },
@@ -23,14 +16,14 @@ const Header = () => {
     { id: 'remote-jobs', label: 'Remote Jobs', href: '/remote' },
     { id: 'crypto', label: 'Crypto', href: '/crypto' },
     { id: 'ai-tools', label: 'AI Tools', href: '/ai-tools' },
-    { id: 'online-income', label: 'Online Income', href: '#online-income' },
+    { id: 'online-income', label: 'Online Income', href: '/online-income' },
   ];
 
   return (
-    <Navbar expand="lg" className="bg-white py-3 sticky-top shadow">
+    <Navbar expand="lg" className="bg-white py-3 sticky-top shadow-sm">
       <Container>
         {/* Brand Logo */}
-        <Navbar.Brand href="/" className="d-flex align-items-center">
+        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img
             src={logo}
             alt="Blogora Logo"
@@ -63,18 +56,17 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav" className="d-none d-lg-flex justify-content-center">
           <Nav className="gap-4 fw-semibold align-items-center">
             {navItems.map((item) => (
-              <Nav.Link
+              <NavLink
                 key={item.id}
-                href={item.href}
-                onClick={() => handleNavClick(item.id)}
-                className={
-                  activeNav === item.id
-                    ? 'active text-primary border-bottom border-primary border-2 pb-1'
-                    : 'text-dark'
+                to={item.href}
+                className={({ isActive }) =>
+                  isActive
+                    ? 'nav-link text-primary border-bottom border-primary border-2 pb-1 fw-bold'
+                    : 'nav-link text-dark'
                 }
               >
                 {item.label}
-              </Nav.Link>
+              </NavLink>
             ))}
           </Nav>
         </Navbar.Collapse>
@@ -90,18 +82,18 @@ const Header = () => {
           <Offcanvas.Body>
             <Nav className="flex-column gap-3 fw-semibold my-3">
               {navItems.map((item) => (
-                <Nav.Link
+                <NavLink
                   key={item.id}
-                  href={item.href}
-                  onClick={() => handleNavClick(item.id)}
-                  className={
-                    activeNav === item.id
-                      ? 'text-primary fw-bold'
-                      : 'text-dark'
+                  to={item.href}
+                  onClick={handleClose}
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'nav-link text-primary fw-bold ps-2 border-start border-primary border-3'
+                      : 'nav-link text-dark'
                   }
                 >
                   {item.label}
-                </Nav.Link>
+                </NavLink>
               ))}
             </Nav>
             <div className="pt-3 border-top">

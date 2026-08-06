@@ -187,3 +187,227 @@ a{
   background-color: #F3E8FF;
   color: #9333EA;
 }
+
+
+
+
+
+/* =========================================================
+   DASHBOARD EXTRA & CUSTOM STYLES
+   ========================================================= */
+
+/* --- Wrapper & Layout Setup --- */
+.dashboard-wrapper {
+  background-color: var(--bg-main, #f8f9fb);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-dark, #0F172A);
+}
+
+/* --- Sidebar Fine-Tuning --- */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  border-right: 1px solid #f0f0f3;
+  z-index: 1000;
+}
+
+.sidebar-menu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+
+.nav-item-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  color: #64748B;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 2px;
+}
+
+.nav-item-link:hover {
+  background-color: #f4f5f8;
+  color: #0F172A;
+}
+
+.nav-item-link.active {
+  background-color: var(--primary-color, #5833EF);
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(88, 51, 239, 0.25);
+}
+
+/* --- Search Input & Header Elements --- */
+.search-input {
+  background-color: #ffffff;
+  border: 1px solid #f0f0f3;
+  font-size: 13px;
+  padding-left: 38px;
+  border-radius: 10px;
+  height: 38px;
+}
+
+.search-input:focus {
+  border-color: var(--primary-color, #5833EF);
+  box-shadow: 0 0 0 3px rgba(88, 51, 239, 0.1);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* --- Utility Typography Classes --- */
+.fs-7 {
+  font-size: 0.875rem !important; /* 14px */
+}
+
+.fs-8 {
+  font-size: 0.75rem !important;  /* 12px */
+}
+
+/* --- Stat Icon Backgrounds --- */
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.icon-purple {
+  background-color: #EEF2FF;
+  color: var(--primary-color, #5833EF);
+}
+
+.icon-green {
+  background-color: #DCFCE7;
+  color: #16A34A;
+}
+
+.icon-yellow {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+.icon-blue {
+  background-color: #E0F2FE;
+  color: #0284C7;
+}
+
+/* --- Category & Status Badges --- */
+.badge-remote { 
+  background-color: #e0f2fe !important; 
+  color: #0284c7 !important; 
+}
+
+.badge-ai { 
+  background-color: #f3e8ff !important; 
+  color: #9333ea !important; 
+}
+
+.badge-crypto { 
+  background-color: #fef3c7 !important; 
+  color: #d97706 !important; 
+}
+
+.badge-freelance { 
+  background-color: #dcfce7 !important; 
+  color: #16a34a !important; 
+}
+
+.badge-income { 
+  background-color: #ffe4e6 !important; 
+  color: #e11d48 !important; 
+}
+
+.badge-published { 
+  background-color: #dcfce7 !important; 
+  color: #16a34a !important; 
+}
+
+.badge-draft { 
+  background-color: #fef3c7 !important; 
+  color: #d97706 !important; 
+}
+
+/* --- Table Styling --- */
+.post-table th {
+  font-size: 11px;
+  color: #9a9fa5;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #f0f0f3;
+  padding-bottom: 12px;
+}
+
+.post-table td {
+  padding: 14px 8px;
+  font-size: 13px;
+  border-bottom: 1px solid #f0f0f3;
+}
+
+.post-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.table-action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f3;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.table-action-btn:hover {
+  background-color: #f4f5f8;
+  color: #0F172A;
+}
+
+/* --- Action Buttons --- */
+.btn-quick-action {
+  background-color: #ffffff;
+  border: 1px solid #f0f0f3;
+  color: var(--primary-color, #5833EF);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.btn-quick-action:hover {
+  background-color: var(--primary-color, #5833EF);
+  color: #ffffff;
+  border-color: var(--primary-color, #5833EF);
+}
+
+

@@ -3,20 +3,20 @@ import { Container, Row, Col, Card, Form, Button, Badge } from 'react-bootstrap'
 import { FaRobot, FaUsers, FaThLarge, FaStar, FaGlobe } from 'react-icons/fa';
 import Sidebar from './Sidebar';
 import Layouts from './Layouts';
-import AiToolsBg from '../assets/aitools.png'; 
+import OnlineBg from '../assets/online.png'; 
 import Articles from './Articles';
 
 
 
 
-const AiTools = () => {
+const OnlineIncome = () => {
   return (
     <Layouts>
       <div className="position-relative overflow-hidden d-flex align-items-center justify-content-center py-5">
       
         {/* Background Image */}
         <img 
-          src={AiToolsBg} 
+          src={OnlineBg} 
           alt="Remote Jobs Background" 
           className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
         />
@@ -115,4 +115,4 @@ const AiTools = () => {
   );
 };
 
-export default AiTools;
+export default OnlineIncome;
