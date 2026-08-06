@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import SingleArticle from './components/SingleArticle';
+import SingleArticle from './components/common/SingleArticle';
 import Freelancing from './components/Freelancing';
 import Remote from './components/Remote';
 import Crypto from './components/Crypto';

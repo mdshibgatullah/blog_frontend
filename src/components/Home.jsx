@@ -1,8 +1,8 @@
 import React from 'react'
-import Layouts from './Layouts'
-import Hero from './Hero';
-import Category from './Category';
-import LatestArticles from './LatestArticles';
+import Layouts from './common/Layouts'
+import Hero from './common/Hero';
+import Category from './common/Category';
+import LatestArticles from './common/LatestArticles';
 // import Articles from './Articles';
 
 

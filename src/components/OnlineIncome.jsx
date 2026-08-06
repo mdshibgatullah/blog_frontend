@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Card, Form, Button, Badge } from 'react-bootstrap';
 import { FaRobot, FaUsers, FaThLarge, FaStar, FaGlobe } from 'react-icons/fa';
-import Sidebar from './Sidebar';
-import Layouts from './Layouts';
+import Sidebar from './common/Sidebar';
+import Layouts from './common/Layouts';
 import OnlineBg from '../assets/online.png'; 
-import Articles from './Articles';
+import Articles from './common/Articles';
 
 
 

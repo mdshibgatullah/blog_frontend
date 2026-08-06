@@ -1,9 +1,7 @@
 import React from 'react';
 import { Col, Card, Button, Row,  } from 'react-bootstrap';
 import { FaArrowRight, FaRedoAlt, FaFire, FaTag } from 'react-icons/fa';
-// import Sidebar from './Sidebar';
 
-// Sample Data for Latest Articles
 const latestArticles = [
   {
     id: 1,
@@ -66,19 +64,7 @@ const latestArticles = [
 
 const Articles = () => {
   return (
-    // <section className="py-4">
-    //   <Container>
-    //     <Row className="g-4">
-          
-    //       {/* LEFT SIDE: Latest Articles */}
-          
 
-    //       {/* RIGHT SIDE: Sidebar Widgets */}
-    //       {/* <Sidebar /> */}
-
-    //     </Row>
-    //   </Container>
-    // </section>
 
     <Col lg={8}>
             <Card className="border rounded-4 p-3 mb-4 bg-white shadow-sm">

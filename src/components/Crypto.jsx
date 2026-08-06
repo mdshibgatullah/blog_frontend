@@ -2,9 +2,9 @@ import React from 'react';
 import { Row, Col, Button, Container, Card } from 'react-bootstrap';
 import { FaArrowRight, FaRedoAlt, FaChartLine, FaWallet, FaShieldAlt, FaClock, FaGlobe } from 'react-icons/fa';
 import cryptoBg from '../assets/cripto.png'; 
-import Layouts from './Layouts';
-import Sidebar from './Sidebar';
-import Articles from './Articles';
+import Layouts from './common/Layouts';
+import Sidebar from './common/Sidebar';
+import Articles from './common/Articles';
 
 
 

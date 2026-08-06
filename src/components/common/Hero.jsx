@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
-import background from '../assets/background.png';
-import heroImg from '../assets/hero.png';
+import background from '../../assets/background.png';
+import heroImg from '../../assets/hero.png';
 
 const Hero = () => {
   return (
