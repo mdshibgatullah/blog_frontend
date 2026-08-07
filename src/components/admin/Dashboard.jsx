@@ -1,17 +1,18 @@
-import React from 'react';
-import { Row, Col, Card, Table, Badge, Form, Button } from 'react-bootstrap';
+import React, { useContext, useState } from 'react';
+import { Row, Col, Card, Table, Badge, Form, Button, Dropdown } from 'react-bootstrap';
 import { 
   FaThLarge, FaFileAlt, FaFolder, FaTags, FaPhotoVideo, FaCopy, 
   FaComments, FaUsers, FaEnvelope, FaAd, FaChartLine, FaSearch, 
   FaCog, FaUser, FaExternalLinkAlt, FaBell, FaPlus, FaUpload, 
   FaPlusSquare, FaEye, FaEdit, FaTrash, FaArrowUp, FaArrowRight,
-  FaUserPlus, FaCommentAlt, FaChevronDown
+  FaUserPlus, FaCommentAlt, FaChevronDown, FaSignOutAlt
 } from 'react-icons/fa';
 
 import logo from '../../assets/logo.png';
-
+import { AdminAuthContext } from '../context/AdminAuth';
 
 const Dashboard = () => {
+  const {logout} = useContext(AdminAuthContext)
   return (
     <div className="d-flex dashboard-wrapper">
       
@@ -71,16 +72,28 @@ const Dashboard = () => {
               </span>
             </div>
 
-            <div className="d-flex align-items-center gap-2 ms-2">
-              <div className="text-white rounded-circle d-flex align-items-center justify-content-center fw-bold fs-6" style={{ width: 38, height: 38, backgroundColor: 'var(--primary-color)' }}>
-                A
-              </div>
-              <div className="d-none d-md-block">
-                <div className="fw-bold fs-7 lh-1">Admin</div>
-                <small className="text-muted" style={{ fontSize: '11px' }}>Super Admin</small>
-              </div>
-              <FaChevronDown size={12} className="text-muted ms-1" />
-            </div>
+            {/* Admin Dropdown Menu */}
+            <Dropdown align="end">
+              <Dropdown.Toggle as="div" className="d-flex align-items-center gap-2 ms-2 cursor-pointer border-0 bg-transparent p-0 shadow-none">
+                <div className="text-white rounded-circle d-flex align-items-center justify-content-center fw-bold fs-6" style={{ width: 38, height: 38, backgroundColor: 'var(--primary-color)' }}>
+                  A
+                </div>
+                <div className="d-none d-md-block text-start">
+                  <div className="fw-bold fs-7 lh-1">Admin</div>
+                  <small className="text-muted" style={{ fontSize: '11px' }}>Super Admin</small>
+                </div>
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu className="shadow-sm border-0 rounded-3 mt-2 p-1">
+                <Dropdown.Item href="#profile" className="d-flex align-items-center gap-2 fs- py-2 rounded-2">
+                  <FaUser className="text-muted" /> Profile
+                </Dropdown.Item>
+                <Dropdown.Divider className="my-1" />
+                <Dropdown.Item onClick={logout} className="d-flex align-items-center gap-2 fs-7 py-2 rounded-2 text-danger">
+                  <FaSignOutAlt /> Logout
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </div>
         </div>
 

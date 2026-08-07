@@ -5,7 +5,7 @@ import logo from '../../assets/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-light pt-5 mt-5 border-top">
+    <footer className="bg-light pt-5 border-top">
       {/* Top Footer Main Links Section */}
       <Container className="pb-5">
         <Row className="g-4">

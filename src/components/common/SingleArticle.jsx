@@ -3,6 +3,7 @@ import { Col, Card, Badge, Container, Row } from 'react-bootstrap';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaLink, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import Sidebar from './Sidebar';
 import Layouts from './Layouts';
+import { Link } from 'react-router-dom';
 
 const SingleArticle = () => {
   return (
@@ -14,11 +15,11 @@ const SingleArticle = () => {
             {/* Breadcrumb Navigation */}
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb small text-muted mb-0">
-                  <li className="breadcrumb-item">
-                    <a href="#home" className="text-decoration-none text-muted">Home</a>
+                  <li className="breadcrumb-item ">
+                    <Link to="/" className='text-muted'>Home</Link>
                   </li>
                   <li className="breadcrumb-item">
-                    <a href="#freelancing" className="text-decoration-none text-muted">Freelancing</a>
+                    <Link to="/freelancing" className='text-muted'>Freelancing</Link>
                   </li>
                   <li className="breadcrumb-item active text-truncate" aria-current="page" style={{ maxWidth: '250px' }}>
                     Upwork Proposal Writing: Get 90% More Replies

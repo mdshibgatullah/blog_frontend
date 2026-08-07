@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Card, Button, Row,  } from 'react-bootstrap';
 import { FaArrowRight, FaRedoAlt, FaFire, FaTag } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const latestArticles = [
   {
@@ -70,9 +71,9 @@ const Articles = () => {
             <Card className="border rounded-4 p-3 mb-4 bg-white shadow-sm">
               <div className="d-flex justify-content-between align-items-center mb-4">
               <h4 className="fw-bold m-0 text-dark">Latest Articles</h4>
-              <a href="#all-articles" className="text-primary fw-semibold text-decoration-none d-flex align-items-center gap-1">
+              <Link to="#all-articles" className="text-primary fw-semibold text-decoration-none d-flex align-items-center gap-1">
                 View All Articles <FaArrowRight size={12} />
-              </a>
+              </Link>
             </div>
 
             {/* Article Cards Container */}
@@ -101,7 +102,7 @@ const Articles = () => {
                         {article.category}
                       </span>
                       <h5 className="fw-bold text-dark mb-2 style-title cursor-pointer">
-                        <a href="/article">{article.title}</a>
+                        <Link to="/article">{article.title}</Link>
                       </h5>
                       <p className="text-muted small mb-2 line-clamp-2">
                         {article.desc}

@@ -212,7 +212,7 @@ a{
   position: sticky;
   top: 0;
   background-color: #ffffff;
-  border-right: 1px solid #f0f0f3;
+  border-right: 1px solid #d0d0d2;
   z-index: 1000;
 }
 
@@ -233,7 +233,7 @@ a{
   color: #64748B;
   font-weight: 500;
   font-size: 14px;
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   margin-bottom: 2px;
@@ -411,3 +411,15 @@ a{
 }
 
 
+
+
+/* Input Focus Style for Login */
+.input-group .form-control:focus {
+  border-color: #dee2e6 !important;
+  box-shadow: none !important;
+}
+
+.input-group:focus-within {
+  border-radius: 8px;
+  box-shadow: 0 0 0 3px rgba(88, 51, 239, 0.15) !important;
+}

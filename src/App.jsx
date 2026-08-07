@@ -9,6 +9,11 @@ import Crypto from './components/Crypto';
 import AiTools from './components/AiTools';
 import OnlineIncome from './components/OnlineIncome';
 import Dashboard from './components/admin/Dashboard';
+import AdminLogin from './components/admin/AdminLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AdminRequireAuth } from './components/admin/AdminRequireAuth';
+
 
 
 function App() {
@@ -23,9 +28,22 @@ function App() {
           <Route path='/crypto' element= {<Crypto />}/>
           <Route path='/ai-tools' element= {<AiTools />}/>
           <Route path='/online-income' element= {<OnlineIncome />}/>
-          <Route path='/dashboard' element= {<Dashboard />}/>
+
+          
+
+          <Route path='/admin/login' element= {<AdminLogin />}/>
+
+
+
+          <Route path='/admin/dashboard' element= {
+            <AdminRequireAuth>
+              <Dashboard />
+            </AdminRequireAuth>
+          }/>
+
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
       
     </div>
   );
