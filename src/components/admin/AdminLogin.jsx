@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Card, Form, Button, InputGroup } from 'react-bootstrap';
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaArrowRight } from 'react-icons/fa';
 import Layouts from '../common/Layouts';
-import { apiurl } from '../common/http';
+import { apiUrl } from '../common/http';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -19,7 +19,7 @@ const AdminLogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post(`${apiurl}/admin/login`, formData)
+    axios.post(`${apiUrl}/admin/login`, formData)
       .then((res) => {
         if (res.status === 200) {
             const adminInfo = {

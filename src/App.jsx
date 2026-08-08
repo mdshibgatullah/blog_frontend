@@ -14,6 +14,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AdminRequireAuth } from './components/admin/AdminRequireAuth';
 
+import ShowCategory from './components/admin/category/Show';
+import CreateCategory from './components/admin/category/Create';
+import EditCategory from './components/admin/category/Edit';
+
+import ShowTag from './components/admin/tag/Show';
+import CreateTag from './components/admin/tag/Create';
+import EditTag from './components/admin/tag/Edit';
+
 
 
 function App() {
@@ -31,13 +39,53 @@ function App() {
 
           
 
+
           <Route path='/admin/login' element= {<AdminLogin />}/>
-
-
 
           <Route path='/admin/dashboard' element= {
             <AdminRequireAuth>
               <Dashboard />
+            </AdminRequireAuth>
+          }/>
+
+
+
+          {/* Category */}
+          <Route path='/admin/categories' element= {
+            <AdminRequireAuth>
+              <ShowCategory />
+            </AdminRequireAuth>
+          }/>
+
+          <Route path='/admin/categories/create' element= {
+            <AdminRequireAuth>
+              <CreateCategory />
+            </AdminRequireAuth>
+          }/>
+
+          <Route path='/admin/categories/edit/:id' element= {
+            <AdminRequireAuth>
+              <EditCategory />
+            </AdminRequireAuth>
+          }/>
+
+
+          {/* Tag */}
+          <Route path='/admin/tags' element= {
+            <AdminRequireAuth>
+              <ShowTag />
+            </AdminRequireAuth>
+          }/>
+
+          <Route path='/admin/tags/create' element= {
+            <AdminRequireAuth>
+              <CreateTag />
+            </AdminRequireAuth>
+          }/>
+
+          <Route path='/admin/tags/edit/:id' element= {
+            <AdminRequireAuth>
+              <EditTag />
             </AdminRequireAuth>
           }/>
 
